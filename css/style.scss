@@ -1,0 +1,84 @@
+@mixin font-base {
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.2;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #eee;
+}
+
+.container {
+    width: 560px;
+    background-color: #fff;
+    margin: 0 auto;
+    position: relative;
+}
+
+header {
+    position: fixed;
+    width: 560px;
+    background-color: #056da6;
+    text-align: center;
+}
+
+section {
+    width: 560px;
+    text-align: center;
+    padding: 0 5px;
+    padding-top: 45px;
+}
+
+main {
+    padding: 0 35px;
+
+    .other-video {
+        display: flex;
+        cursor: pointer;
+        border: 2px solid #fff;
+        border-radius: 8px;
+        transition: .5s all;
+        margin-top: 9px;
+        padding: 0 5px;
+        &:hover {
+            border: 2px solid #056da6;
+        }
+
+        .preview {
+            width: 220px;
+            padding-top: 4px;
+            img {
+                width: 100%;
+                border-radius: 8px;
+                
+            }
+        }
+
+        .more-info {
+            display: flex;
+            flex-direction: column;
+            padding: 5px 15px;
+
+            .title {
+                @include font-base;
+                font-size: 18px;
+            }
+
+            .desc {
+                @include font-base;
+                font-size: 15px;
+                color: grey;
+                padding-top: 5px;
+            }
+
+        
+        }
+    }
+
+}
